@@ -1,0 +1,7 @@
+{
+	"method": "post",
+	"url": "settlement-api/supplier/account/trans/detail",
+	"params": {
+		"undefined": "undefined + integer + undefined + undefined"
+	}
+}

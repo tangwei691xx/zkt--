@@ -1,0 +1,146 @@
+<template>
+  <div id="app">
+    <div class="col-md-12">
+      <button type="button" name="button" class="btn btn-default" @click="add">添加</button>
+      <button type="button" name="button" class="btn btn-default" @click="remove">删除</button>
+    </div>
+    <div class="col-md-8">
+      <Form
+        class="form-horizontal"
+        :fields="fields"
+        :validators="validators"
+        :validation="validation"
+        :triggers="triggers"
+        :options="options"
+        :components="components"
+        ref="form"
+        v-model="model"
+        @change="onChange"
+        @click="onClick"
+        @submit="onSubmit">
+      </Form>
+    </div>
+    <div class="col-md-4">
+      <ul class="nav nav-tabs" style="margin-bottom: 15px">
+        <li :class="{active: tab==1}"><a href="" @click.prevent="changeTab(1)">表单值</a></li>
+        <li :class="{active: tab==2}"><a href="" @click.prevent="changeTab(2)">校验规则</a></li>
+        <li :class="{active: tab==3}"><a href="" @click.prevent="changeTab(3)">控件设置</a></li>
+      </ul>
+      <textarea v-if="tab==1" class="form-control" rows="30" v-model="model2">{{model}}</textarea>
+      <textarea v-if="tab==2" class="form-control" rows="30" v-model="validation2">{{validation}}</textarea>
+      <textarea v-if="tab==3" class="form-control" rows="30" v-model="fields2">{{fields}}</textarea>
+    </div>
+  </div>
+</template>
+
+<script>
+import Form from './export'
+import fields from './assets/fields'
+import validators from './assets/validators'
+import validation from './assets/validation'
+import model from './assets/model'
+import triggers from'./assets/triggers'
+export default {
+  name: 'app',
+  components: {
+    Form
+  },
+  data () {
+    return {
+      model,
+      fields,
+      validation,
+      triggers,
+      validators,
+      tab: 1,
+      options: {
+        labelColumn: 3
+      },
+      components: {
+        Custom: {
+          template: '<div>custom</div>'
+        }
+      }
+    }
+  },
+  computed: {
+    model2: {
+      get() {
+        return JSON.stringify(this.model, null, '    ')
+      },
+      set(str) {
+        this.model = JSON.parse(str)
+      }
+    },
+    validation2: {
+      get() {
+        return JSON.stringify(this.validation, null, '    ')
+      },
+      set(str) {
+        this.model = JSON.parse(str)
+      }
+    },
+    fields2: {
+      get() {
+        return JSON.stringify(this.fields, null, '    ')
+      },
+      set(str) {
+        this.model = JSON.parse(str)
+      }
+    }
+  },
+  methods: {
+    add () {
+      this.$refs.form.addField({
+        label: 'label',
+        name: 'label',
+        component: 'Input'
+      })
+    },
+    remove () {
+      this.$refs.form.removeField()
+    },
+    onSubmit (e) {
+      console.log('onSubmit')
+    },
+    onClick (name, value) {
+      console.log('onClick', name, value)
+    },
+    onChange (key, value) {
+      console.log(key, value)
+    },
+    changeTab (i) {
+      this.tab = i
+    }
+  }
+}
+</script>
+
+<style>
+.form-group.active {
+  background-color: rgba(200, 200, 200, 0.8);
+}
+>>>.subTitlebg{
+  border-radius: 4px;
+  position: relative;;
+  padding: 4px 0;
+  margin: -4px 15px 0 4px !important;
+  background: linear-gradient(to right, transparent 16.666%, #f6f7f9 16.666%, #f6f7f9 );
+}
+>>>.subTitlebg::before{
+  content: '';
+  background: #f6f7f9;
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  left: 16.666%;
+  margin-left: -4px;
+  top: 0;
+  border:4px solid #f6f7f9;
+  border-radius: 4px;
+}
+.form-group{
+  padding-bottom: 15px;
+  margin-bottom: 0
+}
+</style>

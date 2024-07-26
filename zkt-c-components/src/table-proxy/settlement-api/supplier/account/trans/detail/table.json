@@ -1,0 +1,30 @@
+[
+	{
+		"name": "transId",
+		"header": "模型"
+  },
+  {
+		"name": "businessTypeName",
+		"header": "业务线",
+    "searchable": true
+	},
+  {
+		"name": "feeTypeName",
+		"header": "入账类型",
+		"sortable": true
+	},
+  {
+		"name": "transTypeName",
+    "header": "对应门店",
+    "value": {}
+  },
+  {
+    "name": "actions",
+    "header": "操作",
+    "component": "Buttons",
+    "buttons": [{
+      "name": "详情",
+      "value": "detail"
+    }]
+  }
+]
