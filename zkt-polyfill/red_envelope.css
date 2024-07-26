@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'zktFontNumber v3';
+  src: url(data:font/truetype;charset=utf-8;base64,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) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.redEnvelopeBtn {
+  position: absolute;
+  z-index: 101;
+  top: 26.66667vw;
+  right: 0; }
+
+.test_red_envelope {
+  position: absolute;
+  z-index: 10000;
+  top: 26.66667vw;
+  left: 0;
+  background: red;
+  width: 100px;
+  color: #FFF; }
+.test_red_warning{
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: red;width: 100%;color: #FFF;
+}
+
+@keyframes redEnvelopeAnimate {
+  0%, 100% {
+    transform: scale(1) rotate(0); }
+  5%, 10% {
+    transform: scale(0.9) rotate(6deg); }
+  8%, 12%, 16%, 20% {
+    transform: scale(1.1) rotate(-6deg); }
+  10%, 20% {
+    transform: scale(1.1) rotate(6deg); }
+  20%, 22% {
+    transform: scale(1) rotate(0); }
+  22%, 100% {
+    transform: scale(1) rotate(0); } }
+@-webkit-keyframes redEnvelopeAnimate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0); }
+  5%, 10% {
+    -webkit-transform: scale(0.9) rotate(6deg); }
+  8%, 12%, 16%, 20% {
+    -webkit-transform: scale(1.1) rotate(-6deg); }
+  10%, 20% {
+    -webkit-transform: scale(1.1) rotate(6deg); }
+  20%, 22% {
+    -webkit-transform: scale(1) rotate(0); }
+  22%, 100% {
+    -webkit-transform: scale(1) rotate(0); } }
+@-moz-keyframes redEnvelopeAnimate {
+  0%, 100% {
+    -moz-transform: scale(1) rotate(0); }
+  5%, 10% {
+    -moz-transform: scale(0.9) rotate(6deg); }
+  8%, 12%, 16%, 20% {
+    -moz-transform: scale(1.1) rotate(-6deg); }
+  10%, 20% {
+    -moz-transform: scale(1.1) rotate(6deg); }
+  20%, 22% {
+    -moz-transform: scale(1) rotate(0); }
+  22%, 100% {
+    -moz-transform: scale(1) rotate(0); } }
+@-o-keyframes redEnvelopeAnimate {
+  0%, 100% {
+    -o-transform: scale(1) rotate(0); }
+  5%, 10% {
+    -o-transform: scale(0.9) rotate(6deg); }
+  8%, 12%, 16%, 20% {
+    -o-transform: scale(1.1) rotate(-6deg); }
+  10%, 20% {
+    -o-transform: scale(1.1) rotate(6deg); }
+  20%, 22% {
+    -o-transform: scale(1) rotate(0); }
+  22%, 100% {
+    -o-transform: scale(1) rotate(0); } }
+@-ms-keyframes redEnvelopeAnimate {
+  0%, 100% {
+    -ms-transform: scale(1) rotate(0); }
+  5%, 10% {
+    -ms-transform: scale(0.9) rotate(6deg); }
+  8%, 12%, 16%, 20% {
+    -ms-transform: scale(1.1) rotate(-6deg); }
+  10%, 20% {
+    -ms-transform: scale(1.1) rotate(6deg); }
+  20%, 22% {
+    -ms-transform: scale(1) rotate(0); }
+  22%, 100% {
+    -ms-transform: scale(1) rotate(0); } }
+.red_envelope {
+  width: 16vw;
+  -webkit-animation: redEnvelopeAnimate 2.2s ease infinite 1.3s;
+  -moz-animation: redEnvelopeAnimate 2.2s ease infinite 1.3s;
+  -o-animation: redEnvelopeAnimate 2.2s ease infinite 1.3s;
+  -ms-animation: redEnvelopeAnimate 2.2s ease infinite 1.3s;
+  animation: redEnvelopeAnimate 2.2s ease infinite 1.3s; }
+
+.red_envelope_dialog_mask {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  top: 0; 
+
+}
+
+.red_envelope_dialog_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 102;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  line-height: 1;
+}
+
+.red_envelope_dialog {
+  position: relative;
+  margin-bottom: 1.4rem;
+  width: 3.75rem;
+  height: 3.36rem;
+  background: url("./conpon_bg.png") no-repeat center;
+  background-size: contain; }
+  .red_envelope_dialog .red_envelope_amount {
+    width: 1.1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    position: absolute;
+    bottom: 0.83rem;
+    left: 0.92rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-11deg);
+  }
+  .red_envelope_amount-item {
+    position: relative;
+    font-size: 0.91rem;
+    font-family: "zktFontNumber v3";
+  }
+  .red_envelope_dialog .red_envelope_amount .discount {
+    font-size: 0.15rem;
+    font-family: "PingFang SC";
+    font-weight: 600;
+    position: absolute;
+    bottom: -0.2rem;
+    right: -0.18rem;
+  }
+  .red_envelope_dialog .red_envelope_amount .amount {
+    font-size: 0.2rem;
+    font-family: "zktFontNumber v3";
+    font-weight: 400;
+    position: absolute;
+    top: -0.2rem;
+    left: -0.15rem;
+  }
+  
+  .red_envelope_dialog .red_envelope_amount.min-font .red_envelope_amount-item {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+  }
+  .red_envelope_dialog .red_envelope_amount.min-font {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+  }
+  .red_envelope_dialog .red_envelope_item_limit {
+    position: absolute;
+    bottom: 1.32rem;
+    left: 2.02rem;
+    width: 0.9rem;
+    font-size: 0.12rem;
+    font-family: "PingFang SC";
+    font-weight: 400;
+    text-align: center;
+    opacity: 0.6;
+    transform: rotate(-10deg);
+  }
+  .red_envelope_dialog .red_envelope_item_expire {
+    position: absolute;
+    bottom: 1.16rem;
+    left: 2.08rem;
+    width: 0.85rem;
+    font-size: 0.09rem;
+    font-family: "PingFang SC";
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.6;
+    transform: rotate(-10deg);
+  }
+  .red_envelope_dialog .red_envelope_title {
+    position: absolute;
+    bottom: 0.385rem;
+    left: 0;
+    width: 3.75rem;
+    font-size: 0.15rem;
+    font-family: "PingFang SC";
+    font-weight: 500;
+    text-align: center;
+    color: #A8282F;
+  }
+  .red_envelope_dialog .red_envelope_desc {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0;
+    width: 3.75rem;
+    font-size: 0.1rem;
+    font-family: "PingFang SC";
+    font-weight: 300;
+    text-align: center;
+    color: #999999;
+  }
+  .red_envelope_dialog .red_envelope_close {
+    width: 0.165rem;
+    height: 0.165rem;
+    font-size: 0.165rem;
+    position: absolute;
+    right: 0.45rem;
+    top: -0.47rem;
+    color: #fff;
+    fill: #fff;
+  }

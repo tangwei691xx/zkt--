@@ -1,0 +1,67 @@
+{
+  "name": "zkt-polyfill",
+  "version": "2.51.0-beta.4",
+  "description": "",
+  "main": "index.es6",
+  "publishConfig": {
+    "registry": "http://npm.zhiketong.net:8081/repository/npm_dev/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": " rsync -av   ./* /Users/leixianhua/zhiketong-project/zhida-ticket/node_modules/zkt-polyfill --exclude='node_modules' && rsync -av  ./* /Users/leixianhua/zhiketong-project/zhida-home2-升级/node_modules/zkt-polyfill --exclude='node_modules' && rsync -av  ./* /Users/leixianhua/zhiketong-project/weekend-front/node_modules/zkt-polyfill --exclude='node_modules' && rsync -av  ./* /Users/leixianhua/zhiketong-project/zhida-room/node_modules/zkt-polyfill --exclude='node_modules' && rsync -av  ./* /Users/leixianhua/zhiketong-project/zhida-room/node_modules/zkt-polyfill --exclude='node_modules' &&    rsync -av   ./*  /Users/leixianhua/zkt-project/zhida-common/node_modules/zkt-polyfill --exclude='node_modules'",
+    "build:fsy": "cp -rf ./* /Users/fanshaoyong/fsy0718/zkt/zhida-customize-snapshot/node_modules/zkt-polyfill",
+    "copydxh": "cp -rf ./* /Users/dingxihu/Desktop/zkt/zhida-home2/node_modules/zkt-polyfill",
+    "copyfcs": "cp -rf ./* /Users/fengchunsun/work/co/zhida-campaign/node_modules/zkt-polyfill",
+    "copyzjn": "cp -rf ./* /Users/zjn/Desktop/project/zhida-customize-snapshot/node_modules/zkt-polyfill",
+    "docs": "jsdoc -c ./docs/config.js",
+    "gh-pages": "gh-pages -a -d ./docs/dist --remote origin --message 'update polyfill doc' -b master -r git@git.zhiketong.net:FE/fe-doc.git",
+    "pubdocs": "npm run docs && npm run gh-pages",
+    "lint": "eslint src koa --ext .js,.jsx,.ts,tsx --cache --fix",
+    "lint-watch": "esw src koa -w --ext .js,.jsx,.ts,tsx  --cache --fix",
+    "stylelint": "stylelint --config .stylelintrc.js **/*.{css,sass,scss,less}",
+    "stylelintfix": "stylelint --config .stylelintrc.js **/*.{css,sass,scss,less} --fix",
+    "pub": "npm publish"
+  },
+  "license": "Private",
+  "repository": {
+    "type": "git",
+    "url": "git@git.zhiketong.cn:Web/zkt-polyfill.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,jsx,js,tsx,css,less,scss,sass,es6}": [
+      "node node_modules/eslint-config-zkt/checkEslint.js"
+    ]
+  },
+  "author": "Chunlong",
+  "dependencies": {
+    "@zkt/tracker": "^2.1.0",
+    "axios": "^0.16.2",
+    "dayjs": "^1.11.9",
+    "left-pad": "^1.1.3",
+    "less": "^3.9.0",
+    "promise-polyfill": "^6.0.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-portal": "^4.1.5",
+    "react-tag-component": "^1.3.0",
+    "react-tap-event-plugin": "^3.0.2",
+    "urijs": "^1.19.6",
+    "zhida-bridge": "^0.0.39",
+    "zhida-error": "^1.3.0-beta.0",
+    "zkt-fe-cbo": "^1.0.10"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^4.2.7",
+    "docdash": "^1.2.0",
+    "eslint-config-zkt": "^2.2.0",
+    "fs-extra": "^10.0.0",
+    "gh-pages": "^5.0.0",
+    "jsdoc": "^3.6.7",
+    "jsdoc-to-markdown": "^7.0.1"
+  }
+}
